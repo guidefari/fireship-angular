@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fireship-c4ca9": {
+      "hosting": {
+        "fireship-angular": [
+          "fireship-c4ca9"
+        ]
+      }
+    }
+  }
+}
