@@ -3,10 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { GoogleSigninDirective } from './google-signin.directive';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    GoogleSigninDirective
+  ],
   imports: [
     CommonModule,
     UserRoutingModule,
