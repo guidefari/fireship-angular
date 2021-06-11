@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "dev": "ng serve --hmr",
+    "dev": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -12,7 +12,9 @@
     "serve:ssr": "node dist/fireship-angular/server/main.js",
     "build:ssr": "ng build --prod && ng run fireship-angular:server:production",
     "prerender": "ng run fireship-angular:prerender",
-    "prebuild:ssr": "ngcc"
+    "prebuild:ssr": "ngcc",
+    "build:prerender": "npm run build:client-and-server-bundles && node prerender.js",
+    "serve:prerender": "http-server dist/browser -c-1"
   },
   "private": true,
   "dependencies": {
@@ -53,7 +55,9 @@
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
     "firebase-tools": "^8.0.0 || ^9.0.0",
+    "fs-extra": "^8.1.0",
     "fuzzy": "^0.1.3",
+    "http-server": "^0.9.0",
     "inquirer": "^6.2.2",
     "inquirer-autocomplete-prompt": "^1.0.1",
     "jasmine-core": "~3.6.0",
